@@ -1,5 +1,5 @@
 {
-  "name": "kaczorowskid/board-contracts",
+  "name": "@kaczorowskid/board-contracts",
   "version": "1.0.0",
   "description": "Board contracts",
   "types": "./dist/index.d.ts",
