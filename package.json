@@ -1,10 +1,10 @@
 {
-  "name": "@kaczorowskid/board-contracts",
+  "name": "@kaczorowskid97/board-contracts",
   "version": "1.0.0",
   "description": "Board contracts",
   "types": "./dist/index.d.ts",
   "publishConfig": {
-    "gh-username:registry": "https://npm.pkg.github.com"
+    "kaczorowskid97:registry": "https://npm.pkg.github.com"
   },
   "files": [
     "dist"
