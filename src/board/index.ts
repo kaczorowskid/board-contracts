@@ -55,17 +55,22 @@ export const getBoardsWithPaginationRequest = myzod.object({
   search_value: myzod.string(),
 });
 
-export const getBoardsWithPaginationResponse = boardSchema.and(
-  myzod.object({
-    columns: myzod.array(
-      columnSchema.and(
-        myzod.object({
-          tickets: myzod.array(ticketSchema),
-        })
-      )
-    ),
-  })
-);
+export const getBoardsWithPaginationResponse = myzod.object({
+  rows: myzod.array(
+    boardSchema.and(
+      myzod.object({
+        columns: myzod.array(
+          columnSchema.and(
+            myzod.object({
+              tickets: myzod.array(ticketSchema),
+            })
+          )
+        ),
+      })
+    )
+  ),
+  count: myzod.number(),
+});
 
 export const createBoardRequest = myzod.object({
   title: myzod.string(),
@@ -108,12 +113,12 @@ export const removeTicketResponse = removeResponseSchema;
 
 export const getTicketRequest = onlyIdSchema;
 
-export const getTicketResponse = myzod.array(
-  ticketSchema.and(
-    myzod.object({
-      comments: commentSchema.and(myzod.object({ user: userSchema })),
-    })
-  )
+export const getTicketResponse = ticketSchema.and(
+  myzod.object({
+    comments: myzod.array(
+      commentSchema.and(myzod.object({ user: userSchema }))
+    ),
+  })
 );
 
 export const getColumnRequest = onlyIdSchema;
