@@ -1,11 +1,8 @@
 {
-  "name": "@kaczorowskid/board-contracts",
-  "version": "1.0.0",
+  "name": "board-contracts",
+  "version": "1.0.1",
   "description": "Board contracts",
   "types": "./dist/index.d.ts",
-  "publishConfig": {
-    "kaczorowskid:registry": "https://npm.pkg.github.com"
-  },
   "files": [
     "dist"
   ],
