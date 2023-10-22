@@ -1,10 +1,11 @@
 {
   "name": "board-contracts",
-  "version": "1.0.1",
+  "version": "1.0.11",
   "description": "Board contracts",
-  "types": "./dist/index.d.ts",
+  "types": "./lib/index.d.ts",
+  "main": "./lib/index.js",
   "files": [
-    "dist"
+    "./lib"
   ],
   "scripts": {
     "test": "exit 0",
