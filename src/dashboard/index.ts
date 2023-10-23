@@ -4,7 +4,7 @@ import {
   calendarSchema,
   recentBoardsSchema,
   recentTicketsSchema,
-} from "./utils";
+} from "./common";
 
 export const getDashboardRequest = myzod.object({
   user_id: idSchema,

@@ -1,6 +1,6 @@
 {
   "name": "board-contracts",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "Board contracts",
   "types": "./lib/index.d.ts",
   "main": "./lib/index.js",
