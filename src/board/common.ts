@@ -1,6 +1,8 @@
 import myzod, { Infer } from "myzod";
 import { idSchema } from "../common";
 
+export const prioLiteral = myzod.literals("high", "medium", "low");
+
 export const userSchema = myzod.object({
   id: idSchema,
   email: myzod.string(),
@@ -24,7 +26,7 @@ export const ticketSchema = myzod.object({
   id: idSchema,
   title: myzod.string(),
   description: myzod.string(),
-  prio: myzod.literals("high", "medium", "low"),
+  prio: prioLiteral,
   order: myzod.number(),
   column_id: idSchema,
   user_id: idSchema,
