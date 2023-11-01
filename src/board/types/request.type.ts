@@ -17,6 +17,7 @@ import {
   removeTicketRequestSchema,
   updateBoardRequestSchema,
 } from "../schemas";
+import { wholeBoardSchema } from "../common";
 
 export type GetBoardRequest = Infer<typeof getBoardRequestSchema>;
 export type UpdateBoardRequest = Infer<typeof updateBoardRequestSchema>;
@@ -41,3 +42,4 @@ export type ConfirmShareTokenRequest = Infer<
 export type CreateShareTokenRequest = Infer<
   typeof createShareTokenRequestSchema
 >;
+export type BoardBaseRequest = Infer<typeof wholeBoardSchema>;
