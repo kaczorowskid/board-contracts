@@ -1,6 +1,9 @@
 import myzod from "myzod";
+import validator from "validator";
 
-export const idSchema = myzod.string();
+export const idSchema = myzod
+  .string()
+  .withPredicate(validator.isUUID, "default_site_id must be an uuid");
 
 export const onlyIdSchema = myzod.object({
   id: idSchema,

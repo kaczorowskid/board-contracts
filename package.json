@@ -1,6 +1,6 @@
 {
   "name": "board-contracts",
-  "version": "1.0.30",
+  "version": "1.1.0",
   "description": "Board contracts",
   "types": "./lib/index.d.ts",
   "main": "./lib/index.js",
@@ -18,12 +18,14 @@
   "author": "kaczorowskid",
   "license": "ISC",
   "devDependencies": {
+    "@types/validator": "^13.11.5",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "myzod": "^1.10.2"
+    "myzod": "^1.10.2",
+    "validator": "^13.11.0"
   }
 }
