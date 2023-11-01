@@ -22,7 +22,7 @@ export const editNoteRequestSchema = myzod.object({
 
 export const getNotesByDateRequestSchema = myzod.object({
   user_id: idSchema,
-  date: myzod.string().nullable(),
+  date: myzod.string(),
 });
 
 export const getNoteRequestSchema = onlyIdSchema;

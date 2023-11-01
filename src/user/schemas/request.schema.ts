@@ -4,6 +4,8 @@ import { idSchema, onlyIdSchema } from "../../common";
 export const registerUserRequestSchema = myzod.object({
   email: myzod.string(),
   password: myzod.string(),
+  first_name: myzod.string().optional(),
+  last_name: myzod.string().optional(),
 });
 
 export const loginUserRequestSchema = myzod.object({
@@ -27,7 +29,9 @@ export const confirmAccountUserRequestSchema = myzod.object({
   token: myzod.string().nullable(),
 });
 
-export const authorizeUserRequestSchema = myzod.object({});
+export const authorizeUserRequestSchema = myzod.object({
+  token: myzod.string().optional(),
+});
 
 export const updateUserRequestSchema = myzod.object({
   id: idSchema,

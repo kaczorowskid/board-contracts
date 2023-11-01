@@ -19,3 +19,4 @@ export const getDashboardResponseSchema = myzod.object({
 
 export type GetDashboardRequest = Infer<typeof getDashboardRequest>;
 export type GetDashboardResponse = Infer<typeof getDashboardResponseSchema>;
+export type DashboardBaseRequest = Infer<typeof getDashboardResponseSchema>;

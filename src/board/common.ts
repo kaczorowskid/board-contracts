@@ -47,7 +47,7 @@ export const boardSchema = myzod.object({
   title: myzod.string(),
   description: myzod.string(),
   user_id: idSchema,
-  owner_id: idSchema,
+  owner_id: myzod.string().nullable().optional(),
   created_at: myzod.date(),
   updated_at: myzod.date(),
 });

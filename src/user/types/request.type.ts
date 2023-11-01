@@ -10,6 +10,7 @@ import {
   updatePasswordRequestSchema,
   updateUserRequestSchema,
 } from "../schemas";
+import { userBaseSchema } from "../common";
 
 export type RegisterUserRequest = Infer<typeof registerUserRequestSchema>;
 export type LoginUserRequest = Infer<typeof loginUserRequestSchema>;
@@ -26,3 +27,4 @@ export type ConfirmAccountUserRequest = Infer<
 export type AuthorizeUserRequest = Infer<typeof authorizeUserRequestSchema>;
 export type UpdateUserRequest = Infer<typeof updateUserRequestSchema>;
 export type UpdatePasswordRequest = Infer<typeof updatePasswordRequestSchema>;
+export type UserBaseRequest = Infer<typeof userBaseSchema>;
