@@ -8,7 +8,7 @@ import {
 
 export const getDashboardRequest = myzod.object({
   user_id: idSchema,
-  date: myzod.string(),
+  date: myzod.string().optional(),
 });
 
 export const getDashboardResponseSchema = myzod.object({
