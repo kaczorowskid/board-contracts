@@ -9,15 +9,20 @@ export const getCalendarRequestSchema = myzod.object({
 export const createNoteRequestSchema = myzod.object({
   user_id: idSchema,
   start_date: myzod.string(),
-  hour: myzod.string(),
+  is_done: myzod.boolean().optional(),
   note: myzod.string(),
 });
 
 export const editNoteRequestSchema = myzod.object({
   id: idSchema,
   start_date: myzod.string(),
-  hour: myzod.string(),
+  is_done: myzod.boolean().optional(),
   note: myzod.string(),
+});
+
+export const updateNoteStatusRequestSchema = myzod.object({
+  id: idSchema,
+  is_done: myzod.boolean(),
 });
 
 export const getNotesByDateRequestSchema = myzod.object({

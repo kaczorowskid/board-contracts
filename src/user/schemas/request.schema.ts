@@ -5,8 +5,8 @@ import validator from "validator";
 export const registerUserRequestSchema = myzod.object({
   email: myzod.string().withPredicate(validator.isEmail, "expected email"),
   password: myzod.string().min(3).max(40),
-  first_name: myzod.string().min(3).max(25).optional(),
-  last_name: myzod.string().min(3).max(25).optional(),
+  first_name: myzod.string().min(3).max(25),
+  last_name: myzod.string().min(3).max(25),
 });
 
 export const loginUserRequestSchema = myzod.object({

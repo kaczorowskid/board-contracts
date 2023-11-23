@@ -2,7 +2,11 @@ import myzod from "myzod";
 import { idSchema, onlyIdSchema, paginationSchema } from "../../common";
 import { prioLiteral, wholeBoardSchema } from "../common";
 
-export const getBoardRequestSchema = onlyIdSchema;
+export const getBoardRequestSchema = myzod.object({
+  id: idSchema,
+  text: myzod.string().optional().nullable(),
+  prio: prioLiteral.optional().nullable(),
+});
 export const updateBoardRequestSchema = wholeBoardSchema;
 export const createColumnRequestSchema = myzod.object({
   title: myzod.string().min(3).max(200),
