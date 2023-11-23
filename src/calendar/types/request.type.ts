@@ -6,6 +6,7 @@ import {
   getNoteRequestSchema,
   getNotesByDateRequestSchema,
   removeNoteRequestSchema,
+  updateNoteStatusRequestSchema,
 } from "../schemas";
 import { calendarBaseSchema } from "../common";
 
@@ -16,3 +17,6 @@ export type GetNotesByDateRequest = Infer<typeof getNotesByDateRequestSchema>;
 export type GetNoteRequest = Infer<typeof getNoteRequestSchema>;
 export type RemoveNoteRequest = Infer<typeof removeNoteRequestSchema>;
 export type CalendarBaseRequest = Infer<typeof calendarBaseSchema>;
+export type UpdateNoteStatusRequest = Infer<
+  typeof updateNoteStatusRequestSchema
+>;
